@@ -27,10 +27,10 @@ local.properties
 
 Servers/
 
-cdp/cdp_webapp/.classpath
+
 *.tern-project
 *.prefs
-cdp/cdp_webapp/.project
+
 *.component
-cdp/cdp_core/target/classes/com/stella/cdp/datasource/DataSourceManager.class
+
 *.class
