@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html lang="en-US" ng-app>
+<head>
+    <meta charset="utf-8">
+    <title>Login AngularJS</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+    <form name="frm" ng-submit="">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+        
+            <h4>Login</h4>
+            <label>Email : &nbsp;&nbsp;</label>
+            <input type="email" placeholder="Enter Username" class="form-control input-sm chat-input" name="email" ng-model="user.email" required/>
+            <div ng-show="frm.email.$dirty && frm.email.$error.required">Required</div>
+            <div ng-show="frm.email.$dirty && frm.email.$error.email">Not an Email!</div>
+        
+        <br/>
+            
+        
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" class="form-control input-sm chat-input" name="password" ng-model="user.password" 
+                   ng-minlength="5" ng-maxlength="10" required/>
+            <div ng-show="frm.password.$dirty && frm.password.$error.required">Required</div>
+            <div ng-show="frm.password.$dirty && frm.password.$error.minlength">Password Length is Too Short?</div>
+            <div ng-show="frm.password.$dirty && frm.password.$error.maxlength">Password Length is Too Long!</div>
+        
+        <br/>
+        
+        <div class="wrapper">
+        <span class="group-btn">     
+            <a ng-disabled="frm.$invalid" class="btn btn-primary btn-md">login<i class="fa fa-sign-in"></i></a>
+            </span>
+        </div>
+        </div>
+        </div>
+    </form>
+    </div>    
+</div>
+</body>
+</html>
